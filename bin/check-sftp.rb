@@ -32,7 +32,6 @@
 #
 
 require 'sensu-plugin/check/cli'
-gem 'net-sftp', '~> 2.1.0'
 require 'net/sftp'
 
 # Checks sFTP site
