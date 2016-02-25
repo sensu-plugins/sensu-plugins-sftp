@@ -95,25 +95,26 @@ class CheckSftp < Sensu::Plugin::Check::CLI
          long: '--older_than OLDER_THAN',
          proc: proc(&:to_i),
          description: 'Alert if any file age > OLDER_THAN seconds'
-
   def run
-    if sftp
-      check_file_write
-      check_file_count
-      check_file_age
+    begin
+      if sftp
+        check_file_write
+        check_file_count
+        check_file_age
+      end
+    rescue SocketError => e
+      critical "Could not connect: #{e.inspect}"
+    rescue Net::SSH::AuthenticationFailed
+      critical "Failed authentication with #{config[:username]}"
+    rescue Net::SFTP::StatusException => e
+      critical "SFTP Error - #{e.message}"
+    rescue Errno::ECONNREFUSED
+      critical "Failed to connect as conneciton was refused."
+    rescue Exception => e
+      critical "Unexpected error; #{e.inspect}"
+    else
+      ok
     end
-
-    ok
-  rescue Timeout::Error
-    critical "Timed out after #{config[:timeout]}s"
-  rescue SocketError => e
-    critical "Could not connect: #{e.inspect}"
-  rescue Net::SSH::AuthenticationFailed
-    critical "Failed authentication with #{config[:username]}"
-  rescue Net::SFTP::StatusException => e
-    critical "SFTP Error - #{e.message}"
-  rescue => e
-    critical "Unexpected error; #{e.inspect}"
   end
 
   private
