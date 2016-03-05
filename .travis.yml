@@ -16,13 +16,15 @@ notifications:
     on_failure: always
 script:
 - bundle exec rake default
+- gem build sensu-plugins-sftp.gemspec
+- gem install sensu-plugins-sftp-*.gem
 deploy:
   provider: rubygems
   api_key:
-    secure: O/dCg9DGvibgLfUCXxv9R8e7M4wlS1qciODhLE2YBO2nXpMahFPpO35UlB+lEfr/SfJrq2yB8c+19jStNLuS2UXXS2KArQYxLCB0NPhmER40RuZm7frnF+yKVPlFWUGC6CEiQqKt8qbxyke5g1pft9lQOprdGjmJfIJ0XDfmgMI=
+    secure: Tb1NSE8FqOOSNtrnBHuTczrCLIuBp0RFMS6d1TadVK1jX2J4hylovgTANqq58CFxyu5NTc80qBXPxDh9SR1w2o2c43aMVUKHjKAtDFjav8LztsoYBWoxEwqCd2uwo5e4kUQ15ybh3fXpyxVH8ce9CQYYXllFkZVKUSKXoPVxx/Q=
   gem: sensu-plugins-sftp
   on:
-    tags: true
+    ags: true
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0

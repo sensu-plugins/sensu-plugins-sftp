@@ -9,11 +9,9 @@ else
   require_relative 'lib/sensu-plugins-sftp'
 end
 
-#pvt_key = '~/.ssh/gem-private_key.pem'
-
 Gem::Specification.new do |s|
   s.authors                = ['Sensu-Plugins and contributors']
-  #s.cert_chain             = ['certs/sensu-plugins.pem']
+
   s.date                   = Date.today.to_s
   s.description            = 'This plugin provides native SFTP instrumentation
                               for monitoring, including: service connectivity,
@@ -34,13 +32,13 @@ Gem::Specification.new do |s|
   s.post_install_message   = 'You can use the embedded Ruby by setting EMBEDDED_RUBY=true in /etc/default/sensu'
   s.require_paths          = ['lib']
   s.required_ruby_version  = '>= 1.9.3'
-  #s.signing_key            = File.expand_path(pvt_key) if $PROGRAM_NAME =~ /gem\z/
+
   s.summary                = 'Sensu plugins for sftp'
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
   s.version                = SensuPluginsSftp::Version::VER_STRING
 
   s.add_runtime_dependency 'sensu-plugin', '~> 1.2'
-  s.add_runtime_dependency 'net-sftp',          '2.1.0'
+  s.add_runtime_dependency 'net-sftp', '2.1.0'
 
   s.add_development_dependency 'bundler',                   '~> 1.7'
   s.add_development_dependency 'codeclimate-test-reporter', '~> 0.4'
