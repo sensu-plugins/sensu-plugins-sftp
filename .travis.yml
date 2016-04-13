@@ -24,7 +24,7 @@ deploy:
     secure: Tb1NSE8FqOOSNtrnBHuTczrCLIuBp0RFMS6d1TadVK1jX2J4hylovgTANqq58CFxyu5NTc80qBXPxDh9SR1w2o2c43aMVUKHjKAtDFjav8LztsoYBWoxEwqCd2uwo5e4kUQ15ybh3fXpyxVH8ce9CQYYXllFkZVKUSKXoPVxx/Q=
   gem: sensu-plugins-sftp
   on:
-    ags: true
+    tags: true
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0
