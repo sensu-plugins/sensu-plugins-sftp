@@ -104,8 +104,6 @@ class CheckSftp < Sensu::Plugin::Check::CLI
     end
 
     ok
-  rescue Timeout::Error
-    critical "Timed out after #{config[:timeout]}s"
   rescue SocketError => e
     critical "Could not connect: #{e.inspect}"
   rescue Net::SSH::AuthenticationFailed
