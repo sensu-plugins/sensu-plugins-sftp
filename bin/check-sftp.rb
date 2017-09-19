@@ -146,6 +146,6 @@ class CheckSftp < Sensu::Plugin::Check::CLI
   end
 
   def sftp
-    @sftp ||= Net::SFTP.start(config[:host], config[:username], password: config[:password], timeout: config[:timeout], port: config[:port])
+    @sftp ||= Net::SFTP.start(config[:host], config[:username], password: config[:password], timeout: config[:timeout], port: config[:port],auth_methods:['publickey','password'])
   end
 end
