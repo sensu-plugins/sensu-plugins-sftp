@@ -4,8 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+
+## [1.0.1] - 2017-09-20
 ### Fixed
-- Corrected Auth Method in Net::SFTP.start
+- Corrected Auth Method in Net::SFTP.start (@makaveli0129)
 
 ### Added
 - Ruby 2.4.1 testing
@@ -32,5 +34,6 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 - initial release
 
 [Unreleased]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/1.0.0...HEAD
+[1.0.1]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/0.0.2...1.0.0
 [0.0.2]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/0.0.1...0.0.2
