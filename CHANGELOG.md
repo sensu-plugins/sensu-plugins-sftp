@@ -5,6 +5,13 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
+## [2.1.0] - 2020-05-15
+### Added
+- Bonsai asset support, missed .bonsai.yml before
+
+### Changed
+- Updated net-sftp dependency to '3.0.0'
+
 ## [2.0.0] - 2020-05-15
 ### Breaking Changes
 - Update minimum required ruby version to 2.3. Drop unsupported ruby versions.
@@ -47,7 +54,8 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/2.0.0...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/2.1.0...HEAD
+[2.1.0]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/1.0.1...2.0.0
 [1.0.1]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/0.0.2...1.0.0
