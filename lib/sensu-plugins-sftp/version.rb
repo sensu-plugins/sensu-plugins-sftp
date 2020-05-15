@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SensuPluginsSftp
   # This defines the version of the gem
   module Version

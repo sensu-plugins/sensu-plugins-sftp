@@ -5,6 +5,19 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
+### Breaking Changes
+- Update minimum required ruby version to 2.3. Drop unsupported ruby versions.
+- Bump `sensu-plugin` dependency to `~> 4.0`
+
+### Added
+- Bonsai asset support
+### Changed
+- Updated bundler dependancy to '~> 2.1'
+- Updated rubocop dependency to '~> 0.81.0'
+- Remediated rubocop issues
+- Updated rake dependency to '~> 13.0'
+- Updated net-sftp dependency to '2.1.2'
+
 ## [1.0.1] - 2017-09-20
 ### Fixed
 - Corrected Auth Method in Net::SFTP.start (@makaveli0129)

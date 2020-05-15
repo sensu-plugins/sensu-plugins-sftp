@@ -1,4 +1,6 @@
 #! /usr/bin/env ruby
+# frozen_string_literal: true
+
 #
 #   check-sftp
 #
@@ -110,7 +112,7 @@ class CheckSftp < Sensu::Plugin::Check::CLI
     critical "Failed authentication with #{config[:username]}"
   rescue Net::SFTP::StatusException => e
     critical "SFTP Error - #{e.message}"
-  rescue => e
+  rescue => e # rubocop: disable Style/RescueStandardError
     critical "Unexpected error; #{e.inspect}"
   end
 
@@ -149,6 +151,6 @@ class CheckSftp < Sensu::Plugin::Check::CLI
     @sftp ||= Net::SFTP.start(config[:host], config[:username], password: config[:password],
                                                                 timeout: config[:timeout],
                                                                 port: config[:port],
-                                                                auth_methods: %w(publickey password))
+                                                                auth_methods: %w[publickey password])
   end
 end
