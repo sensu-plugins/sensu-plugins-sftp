@@ -5,6 +5,10 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
+## [2.1.1] - 2020-06-25
+### Changed
+- Change frozen_string_literal to false in the check
+
 ## [2.1.0] - 2020-05-15
 ### Added
 - Bonsai asset support, missed .bonsai.yml before
@@ -54,7 +58,8 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/2.1.0...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/2.1.1...HEAD
+[2.1.1]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/2.1.0...2.1.1
 [2.1.0]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/1.0.1...2.0.0
 [1.0.1]: https://github.com/sensu-plugins/sensu-plugins-sftp/compare/1.0.0...1.0.1
